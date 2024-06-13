@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -19,6 +21,14 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        val properties = Properties()
+        properties.load(
+            project.rootProject.file("local.properties").inputStream()
+        )
+        buildConfigField(
+            "String","API_KEY", properties.getProperty("API_KEY")
+        )
     }
 
     buildTypes {
@@ -38,6 +48,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeOptions {
@@ -82,4 +93,22 @@ dependencies {
 //    datastore preference
     //    preferences 10
     implementation("androidx.datastore:datastore-preferences-android:1.1.0")
+
+    //    lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
+
+    //    retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.10.0")
+//    implementation("com.squareup.retrofit2:converter-scalars:2.10.0")
+//    moshi
+    implementation("com.squareup.retrofit2:converter-moshi:2.10.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.9.3")
+//    coil
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
+    // google services
+    implementation("androidx.credentials:credentials:1.2.2")
+    implementation("androidx.credentials:credentials-play-services-auth:1.2.2")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.0")
+
 }

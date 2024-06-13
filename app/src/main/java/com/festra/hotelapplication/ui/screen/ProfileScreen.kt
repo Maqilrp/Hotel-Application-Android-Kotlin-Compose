@@ -22,56 +22,15 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import com.festra.hotelapplication.ui.components.BottomAppBarComponent
 
 @Composable
 fun ProfileScreen(navController: NavController){
-    val items = listOf(
-        BottomNavigationItem(
-            title = "Home",
-            selectedIcon = Icons.Filled.Home,
-            unselectedIcon = Icons.Outlined.Home
-        ),
-        BottomNavigationItem(
-            title = "Booking",
-            selectedIcon = Icons.Filled.DateRange,
-            unselectedIcon = Icons.Outlined.DateRange
-        ),
-        BottomNavigationItem(
-            title = "Profile",
-            selectedIcon = Icons.Filled.AccountCircle,
-            unselectedIcon = Icons.Outlined.AccountCircle
-        ),
-    )
 
-    var selectedIconIndex by rememberSaveable {
-        mutableIntStateOf(2)
-    }
 
     Scaffold(
         bottomBar = {
-            NavigationBar {
-                items.forEachIndexed { index, item ->
-                    NavigationBarItem(
-                        selected = selectedIconIndex == index,
-                        onClick = {
-                            selectedIconIndex = index
-                            navController.navigate(item.title)
-                        },
-                        label = {
-                            Text(text = item.title)
-                        },
-                        alwaysShowLabel = false,
-                        icon = {
-                            Icon(
-                                imageVector = if (index == selectedIconIndex) {
-                                    item.selectedIcon
-                                } else item.unselectedIcon,
-                                contentDescription = item.title
-                            )
-                        }
-                    )
-                }
-            }
+            BottomAppBarComponent(navController = navController, selectedIconIndex = 2)
         }
     ) {
             paddingValues ->

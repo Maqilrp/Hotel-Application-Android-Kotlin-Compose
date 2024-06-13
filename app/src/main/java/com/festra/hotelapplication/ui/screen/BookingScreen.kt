@@ -58,6 +58,7 @@ import com.festra.hotelapplication.R
 import com.festra.hotelapplication.database.BookingDb
 import com.festra.hotelapplication.model.Booking
 import com.festra.hotelapplication.navigation.Screen
+import com.festra.hotelapplication.ui.components.BottomAppBarComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -70,28 +71,6 @@ fun BookingScreen(navController: NavController){
     // data store
     val dataStore = SettingsDataStore(LocalContext.current)
     val showList by dataStore.layoutFlow.collectAsState(true)
-
-    val items = listOf(
-        BottomNavigationItem(
-            title = "Home",
-            selectedIcon = Icons.Filled.Home,
-            unselectedIcon = Icons.Outlined.Home
-        ),
-        BottomNavigationItem(
-            title = "Booking",
-            selectedIcon = Icons.Filled.DateRange,
-            unselectedIcon = Icons.Outlined.DateRange
-        ),
-        BottomNavigationItem(
-            title = "Profile",
-            selectedIcon = Icons.Filled.AccountCircle,
-            unselectedIcon = Icons.Outlined.AccountCircle
-        ),
-    )
-
-    var selectedIconIndex by rememberSaveable {
-        mutableIntStateOf(1)
-    }
 
     Scaffold(
         topBar = {
@@ -123,29 +102,7 @@ fun BookingScreen(navController: NavController){
             )
         },
         bottomBar = {
-            NavigationBar {
-                items.forEachIndexed { index, item ->
-                    NavigationBarItem(
-                        selected = selectedIconIndex == index,
-                        onClick = {
-                            selectedIconIndex = index
-                            navController.navigate(item.title)
-                        },
-                        label = {
-                            Text(text = item.title)
-                        },
-                        alwaysShowLabel = false,
-                        icon = {
-                            Icon(
-                                imageVector = if (index == selectedIconIndex) {
-                                    item.selectedIcon
-                                } else item.unselectedIcon,
-                                contentDescription = item.title
-                            )
-                        }
-                    )
-                }
-            }
+            BottomAppBarComponent(navController = navController, selectedIconIndex = 1)
         }
     ) {
         paddingValues ->
