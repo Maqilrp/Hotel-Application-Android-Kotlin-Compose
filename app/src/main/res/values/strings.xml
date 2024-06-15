@@ -7,4 +7,13 @@
     <string name="logout">LogOut</string>
     <string name="hapus">Hapus</string>
     <string name="hapus_dialog">Apakah Anda Ingin Membatalkan Booking ?</string>
+    <string name="simpan">Simpan</string>
+    <string name="batal">Batal</string>
+    <string name="pesan">Pesan</string>
+    <string name="nama">Nama Lengkap</string>
+    <string name="jumlahOrang">Jumlah orang</string>
+    <string name="tambahBooking">Booking Sekarang</string>
+    <string name="error">Terjadi Kesalahan</string>
+    <string name="try_again">Coba Lagi</string>
+    <string name="gambar">Ini Gambar</string>
 </resources>

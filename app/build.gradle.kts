@@ -106,6 +106,9 @@ dependencies {
 //    coil
     implementation("io.coil-kt:coil-compose:2.4.0")
 
+    // image-cropper
+    implementation("com.vanniktech:android-image-cropper:4.5.0")
+
     // google services
     implementation("androidx.credentials:credentials:1.2.2")
     implementation("androidx.credentials:credentials-play-services-auth:1.2.2")

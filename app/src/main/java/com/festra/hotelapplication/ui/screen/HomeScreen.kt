@@ -74,19 +74,19 @@ fun HomeScreen(navController: NavController) {
         bottomBar = {
             BottomAppBarComponent(navController = navController, selectedIconIndex = 0)
         },
-        floatingActionButton = {
-            FloatingActionButton(
-                onClick = {
-                    navController.navigate(Screen.DetailBooking.route)
-                },
-            ) {
-                Text(
-                    text = "Booking Sekarang ",
-                    modifier = Modifier.padding(16.dp),
-                    style = TextStyle(color = Color.White)
-                )
-            }
-        }
+//        floatingActionButton = {
+//            FloatingActionButton(
+//                onClick = {
+//                    navController.navigate(Screen.DetailBooking.route)
+//                },
+//            ) {
+//                Text(
+//                    text = "Booking Sekarang ",
+//                    modifier = Modifier.padding(16.dp),
+//                    style = TextStyle(color = Color.White)
+//                )
+//            }
+//        }
     ) { paddingValues ->
         ScreenContent(modifier = Modifier.padding(paddingValues))
     }

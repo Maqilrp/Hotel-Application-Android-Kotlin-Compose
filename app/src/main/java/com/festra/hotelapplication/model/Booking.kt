@@ -1,18 +1,13 @@
 package com.festra.hotelapplication.model
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import java.util.Date
-
-@Entity(tableName = "booking")
-data class Booking (
-    @PrimaryKey(autoGenerate = true)
-    val id: Long = 0L,
+data class Booking(
+    val id: Long? = null,
+    val userId: String,
     val nama: String,
     val jumlahOrang: String,
     val jenisKamar: String,
-    val checkIn: Date,
-    val checkOut: Date,
+    val checkIn: String,
+    val checkOut: String,
+    val imageId: String,
     val pesan: String
 )
-
