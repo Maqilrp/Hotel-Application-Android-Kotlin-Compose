@@ -3,4 +3,15 @@
     <string name="grid">Tampilan Grid</string>
     <string name="list">Tampilan List</string>
     <string name="list_kosong">Belum Ada Data</string>
+    <string name="tutup">Batal</string>
+    <string name="logout">LogOut</string>
+    <string name="hapus">Hapus</string>
+    <string name="hapus_dialog">Apakah Anda Ingin Membatalkan Booking ?</string>
+    <string name="jumlahOrang">Jumlah Orang</string>
+    <string name="nama">Nama Lengkap</string>
+    <string name="batal">Batal</string>
+    <string name="simpan">Booking</string>
+    <string name="error">Error</string>
+    <string name="try_again">Coba Lagi</string>
+    <string name="gambar">Gambar</string>
 </resources>
