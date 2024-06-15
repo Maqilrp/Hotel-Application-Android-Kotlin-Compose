@@ -126,7 +126,7 @@ class BookingApiViewModel : ViewModel() {
         }
 
         val resizedBitmap = Bitmap.createScaledBitmap(this, width, height, true)
-        var quality = 1
+        var quality = 10
         var stream: ByteArrayOutputStream
         var byteArray: ByteArray
 
