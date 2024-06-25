@@ -16,4 +16,5 @@
     <string name="error">Terjadi Kesalahan</string>
     <string name="try_again">Coba Lagi</string>
     <string name="gambar">Ini Gambar</string>
+    <string name="jenisKamar">Jenis Kamar</string>
 </resources>

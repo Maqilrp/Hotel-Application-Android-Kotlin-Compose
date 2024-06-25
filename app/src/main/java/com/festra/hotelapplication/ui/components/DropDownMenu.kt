@@ -36,7 +36,6 @@ fun JumlahOrangDropDown(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
     ) {
         ExposedDropdownMenuBox(
             expanded = expanded,
@@ -87,7 +86,7 @@ fun JenisKamarDropDown(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+
     ) {
         ExposedDropdownMenuBox(
             expanded = expanded,
@@ -101,7 +100,7 @@ fun JenisKamarDropDown(
                 readOnly = true,
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                 modifier = Modifier.menuAnchor().fillMaxWidth(),
-                label = { Text(text = stringResource(R.string.jumlahOrang)) }
+                label = { Text(text = stringResource(R.string.jenisKamar)) }
             )
 
             ExposedDropdownMenu(

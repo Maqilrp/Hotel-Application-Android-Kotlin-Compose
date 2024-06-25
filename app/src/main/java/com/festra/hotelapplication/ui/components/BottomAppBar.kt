@@ -36,11 +36,11 @@ val items = listOf(
         selectedIcon = Icons.Filled.DateRange,
         unselectedIcon = Icons.Outlined.DateRange
     ),
-    BottomNavigationItem(
-        title = "Profile",
-        selectedIcon = Icons.Filled.AccountCircle,
-        unselectedIcon = Icons.Outlined.AccountCircle
-    ),
+//    BottomNavigationItem(
+//        title = "Profile",
+//        selectedIcon = Icons.Filled.AccountCircle,
+//        unselectedIcon = Icons.Outlined.AccountCircle
+//    ),
 )
 
 @Composable
